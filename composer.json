@@ -1,11 +1,13 @@
 {
     "name": "moosura/gardner",
-    "description": "Building beautiful data structures through smart seeding.",
     "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Moosura\\Gardner\\": "src/"
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/",
+            "Thomdavis\\Gardner\\": "src/"
         }
     },
     "authors": [
@@ -14,6 +16,24 @@
             "email": "Techthomdavis@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "fakerphp/faker": "^1.9.2",
+        "illuminate/bus": "^9.18",
+        "illuminate/console": "^9.18",
+        "illuminate/database": "^9.18",
+        "illuminate/pipeline": "^9.18",
+        "illuminate/support": "^9.18",
+        "mockery/mockery": "^1.5.1",
+        "vlucas/phpdotenv": "^5.4.1",
+        "symfony/console": "^6.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ThomDavis\\Gardner\\GardnerServiceProvider"
+            ]
+        }
+    }
 }
