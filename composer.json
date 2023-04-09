@@ -7,7 +7,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Thomdavis\\Gardner\\": "src/"
+            "Moosura\\Gardner\\": "src/"
         }
     },
     "authors": [
@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.0",
         "ext-json": "*",
         "fakerphp/faker": "^1.9.2",
         "illuminate/bus": "^9.18",
@@ -32,8 +32,20 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ThomDavis\\Gardner\\GardnerServiceProvider"
+                "Moosura\\Gardner\\GardnerServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-main": "v0.1-dev"
         }
-    }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0.2"
+        }
+    },
+    "minimum-stability": "dev"
 }

@@ -2,6 +2,6 @@
 
 require_once 'vendor/autoload.php';
 
-use Thomdavis\Gardner\Farmer;
+use Moosura\Gardner\Farmer;
 
 $class = new Farmer();

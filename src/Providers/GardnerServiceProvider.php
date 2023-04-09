@@ -1,13 +1,13 @@
 <?php
 
-namespace Thomdavis\Gardner\Providers;
+namespace Moosura\Gardner\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Thomdavis\Gardner\Farmer;
+use Moosura\Gardner\Farmer;
 
 class GardnerServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
 
 
@@ -25,7 +25,7 @@ class GardnerServiceProvider extends ServiceProvider
         ], 'public');
     }
 
-    public function register()
+    public function register(): void
     {
         $this->app->scoped(Farmer::class, function () {
             return new Farmer();
